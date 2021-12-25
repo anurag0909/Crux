@@ -6,10 +6,14 @@ Install python 3.9 & IDE - Pycharm in your machine.
 
 Required libraries:    pip, selenium, pytest, pytest-html, openpyxl.
 
+In order to execute the cases Chrome browser, we have to download Chromedriver, which is available in the project.
+
 
 Class description:
 
 Data --> variables - in this class all the paths for driver, excel having test cases, variables to find the elements, example xpaths
+
+**In this class, the paths for excel, chromedriver, folder to save screenshots are mentioned, so kindly update the path with the location where the pulled project will be saved.**
 
 Data --> genericFunctions - in this class all the commonly used functions are mentioned, example, to generate the date, fetch values from excel, etc.
 
@@ -23,7 +27,7 @@ a. Set the configuration of Test_Executor.py as pytest and use the play button i
 
 b. Open the terminal in the IDE and execute the following command -
 
-pytest -v -s --html=Report\report1.html --self-contained-html Executor\Test_Executor.py
+_**pytest -v -s --html=Report\report1.html --self-contained-html Executor\Test_Executor.py**_
 
 This command will generate an html report of the test case execution and will save in Report forlder in the project.
 
