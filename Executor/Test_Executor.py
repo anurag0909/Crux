@@ -1,8 +1,8 @@
 from selenium import webdriver
 from Data import variables
+from Data import genericFunctions
 from functionSteps import Crux
 import pytest
-import pytest_html
 
 
 @pytest.yield_fixture()
@@ -11,16 +11,23 @@ def Case1():
     yield
     print("Executed Properly....")
 
+
+@pytest.mark.skipif(genericFunctions.getFlagValue("TC_001") == 'N', reason="Flag value is N, so skipped the test case")
 def testCase01(Case1):
     Crux.basicCase()
+
 
 @pytest.yield_fixture()
 def Case2():
     print("Starting with another case....")
     yield
     print("App store links working properly...")
+
+
+@pytest.mark.skipif(genericFunctions.getFlagValue("TC_002") == 'N', reason="Flag value is N, so skipped the test case")
 def testCase02(Case2):
     Crux.check_aboutUs()
+
 
 @pytest.yield_fixture()
 def Case3():
@@ -32,5 +39,8 @@ def Case3():
         print("application in correct tab")
     yield
     print("Demo scheduled successfully..")
+
+
+@pytest.mark.skipif(genericFunctions.getFlagValue("TC_003") == 'N', reason="Flag value is N, so skipped the test case")
 def testCase03(Case3):
     Crux.scheduleDemo()

@@ -2,6 +2,7 @@ from selenium import webdriver
 
 driver = webdriver.Chrome(executable_path="C:\\Users\\anurag.agrawal\\Desktop\\CruxIntelligence\\chromedriver.exe")
 screenshot = "C:\\Users\\anurag.agrawal\\Desktop\\CruxIntelligence\\Screenshots\\"
+source_excel = "C:\\Users\\anurag.agrawal\\Desktop\\CruxIntelligence\\Data\\TestCases.xlsx"
 
 logo = "//div//a[@rel = 'home']"
 check_element = "//div[@class = 'col-md-5'][1]"
